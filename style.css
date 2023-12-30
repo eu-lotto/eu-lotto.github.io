@@ -1,0 +1,122 @@
+body {
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	font-family: 'Oswald', Arial, serif;
+	overflow: hidden;
+	margin: 0;
+  background: linear-gradient(to bottom, rgba(135, 206, 250, 0.5), rgba(30, 144, 255, 0.5));
+  
+}
+
+.text-description {
+	font-size: 10px;
+	display: block;
+	text-align: right;
+	margin: 0px;
+	padding: 0px;
+	color: #666;
+	font-weight: 100;
+	font-style: italic;
+}
+
+.centered-div {
+    text-align: center;
+}
+
+.topheaders {
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    text-align: center;
+    font-family: Oswald, serif;
+    color: #003c71;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: .24px;
+}
+
+h4 {
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+   /* margin-bottom: 30px; */
+    opacity: 0;
+    transform: scale(15) translateY(200px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+h4.emphasized {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+	color: red;
+}
+
+.spacer {
+    height: 5vh;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    font-size: 16px;
+    font-family: Lato;
+    color: #333;
+    letter-spacing: .12px;
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+	min-width: 300px;
+	max-width: 600px;
+}
+
+input[type="submit"] {
+
+	display: block;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	/*font-size: 20px;*/
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	background-color: #1a4876;
+	border-radius: 30px;
+	text-transform: uppercase;
+	transition: background-color .3s, border-color .3s, color .3s;
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	letter-spacing: 2px;
+	text-shadow: none;
+}
+
+
+input[type="submit"]:hover {
+	background-color: #337ab7;
+	border-color: #2e6da4;
+}
+
+
+
+
+input[type="Submit"]:disabled {
+  opacity: 1;
+    border: solid 2px #989898 !important;
+    background-color: #989898 !important;
+    color: #fff !important;
+    cursor: default !important;
+}
