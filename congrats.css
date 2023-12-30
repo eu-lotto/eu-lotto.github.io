@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: "Oswald", Arial, serif;
+  background: linear-gradient(
+    to bottom,
+    rgba(115, 195, 245, 1),
+    rgba(25, 135, 245, 1)
+  );
+
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	  background-attachment: fixed; /* Add this line */
+
+}
+
+/* Thank you page styling */
+.top-banner {
+    background-color: #d60000;
+    color: #bbb;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-banner a.back-link {
+  color: #ddd;
+  font-size: 26px;
+  text-decoration: underline;
+}
+
+.top-banner a.back-link:visited {
+  color: #ddd;
+    text-decoration: underline;
+
+}
+
+.top-banner a.back-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+p.top-banner{
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Centering the congrats-contents */
+#congrats-contents {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  
+}
+
+/* Part 2: Big Text */
+.congrats-text {
+  max-width: 500px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3); /* Add a box shadow with some blur and transparency */
+
+  width: 40vw;
+  color: red;
+  font-size: 2em; /* Set font size to 50% of viewport width */
+  margin-bottom: 20px; /* Add some space between text and image */
+}
+
+img.congrats-img {
+  width: 40vw;
+  max-width: 500px;
+}

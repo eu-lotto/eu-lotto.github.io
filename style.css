@@ -29,6 +29,8 @@ body {
     text-align: center;
 }
 
+
+
 h2 {
     display: block;
     text-align: center;
@@ -120,3 +122,315 @@ input[type="Submit"]:disabled {
     color: #fff !important;
     cursor: default !important;
 }
+
+/* Thank you page trophy */
+
+/* .trophy-holder {
+	text-align: center;
+} */
+
+.trophy {
+  width: 500px;
+  height: 500px;
+  margin-top: 100px;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  animation: 2s ease-in 1s infinite alternate both floating ;
+  
+}
+
+@keyframes floating{
+  from{
+    transform:  rotate3d(-3, 1.2, 1, 20deg) translateY(40px);
+  }
+  to{
+    transform:  rotate3d(-1, -.02, .2, 20deg) translateY(0px);
+  }
+}
+.trophy .first, .trophy .second {
+  width: 100%;
+  height: 100%;
+}
+.trophy .second {
+  position: absolute;
+  top: 0;
+  left: 10;
+  transform: rotateY(20deg);
+}
+.trophy .top {
+  height: 60%;
+  width: 30%;
+  margin: auto;
+  margin-bottom: -12%;
+  position: relative;
+  z-index: -1;
+/*   transform: translate3D(0, 40px, -20px); */
+}
+.trophy .top:after {
+     width: 100%;
+    height: 50%;
+    background-color: #E69C12;
+  
+  background: linear-gradient(180deg, rgba(250,189,31,1) 20%, rgba(223,151,17,1) 100%);
+    border-radius: 100%;
+    top: -1px;
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+    border: solid 7px #FFF0C9bb;
+    box-sizing: border-box;
+}
+
+.trophy .cup {
+  height: 60%;
+  width: 100%;
+  margin: auto;
+  border-radius: 0 0 200% 200%;
+  transform: rotate3D(1, 0, 0, -30deg) translateZ(50%);
+  z-index: 2;
+  
+}
+.trophy .cup-base {
+  width: 50%;
+  height: 30%;
+  border-radius: 50%;
+  z-index: 0;
+  margin: auto;
+  margin-top: -5%;
+  margin-bottom: -50%;
+}
+.trophy .circle {
+  z-index: 1;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: -10%;
+}
+.trophy .circle, .trophy .cup-base, .trophy .cup {
+  background-color: #E69C12;
+  overflow: hidden;
+  position: relative;
+}
+.trophy .cup-base:after,
+.trophy .cup:after,
+.trophy .circle:after,
+.trophy .cup:before,
+.trophy .top:after, 
+.trophy .base-top:after{
+  position: absolute;
+  content: "";
+}
+.trophy .cup-base:after {
+  height: 100%;
+  width: 100%;
+  left: -10%;
+  top: -1%;
+  background-color: #FFCB21;
+  border-radius: 50%;
+}
+.trophy .cup:after {
+  height: 112%;
+  width: 100%;
+  top: -10%;
+  left: -10%;
+  background-color: #FFCB21;
+  border-radius: 0 0 200% 200%;
+}
+.trophy .cup:before {
+  background-color: transparent;
+  border-left: 10px solid #FFF0C9bb;
+  height: 76%;
+  width: 50%;
+  top: 15%;
+  left: 10%;
+  border-radius: 0 0 200% 200%;
+  z-index: 15;
+  filter: blur(1px);
+  
+  transform: translateZ(50px) rotateY(0deg);
+animation: 2s ease-in 1s infinite alternate both shine-rotate ;
+}
+
+@keyframes shine-rotate{
+  from{
+    transform: translateZ(50px) rotateY(0deg) translateX(30px);
+      width: 20%;
+  }
+  to{
+    transform: translateZ(50px) rotateY(0deg) ;
+  }
+}
+
+.trophy .arm{
+  transform-style: preserve-3d;
+  position: absolute;
+  height: 20%;
+  width: 25%;
+  border: 12px solid #FFCB21;
+  border-right: none;
+  border-radius: 15% 0 0 200%;
+  top: 15%;
+  right: 90%;
+animation: 2s ease-in 1s infinite alternate both pull-in ;
+}
+
+@keyframes pull-in{
+  from{
+    transform: translateX(-7px) ;
+  }
+  to{
+    transform: translateX(0)
+  }
+}
+
+.trophy .arm.right{
+ 
+  border: 10px solid #E69C12;
+  border-left: none;
+  border-radius: 0 15% 200% 0 ;
+  
+  top: 15%;
+  right: 0;
+  left: 90%;
+}
+
+.trophy .circle:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 80%;
+  background-color: #FFCB21;
+}
+.move{
+  transform-style: preserve-3d;
+  transform: translateZ(40px);
+  width: 100%;
+  height: 100%;
+}
+.trophy .base {
+  background-color: #997B70;
+  width: 40%;
+  height: 18%;
+  margin: auto;
+  position: relative;
+  perspective: 800px;
+  transform-style: preserve-3D;
+}
+.trophy .base-top {
+  width: 100%;
+  height: 150%;
+  background-color: #8F7368;
+  position: absolute;
+  bottom: 100%;
+  transform: rotateX(90deg);
+  transform-origin: bottom center;
+}
+.trophy .base-top:after{
+  transform-style: preserve-3D;
+  background-color: #614E47;
+  width: 30%;
+  height: 50%;
+  position:absolute;
+  top: 0;
+  left: 40%;
+  transform: skew(-40deg);
+  transform-origin: bottom center;
+  
+}
+
+
+.trophy .base-side {
+  width: 68%;
+  height: 99.8%;
+  background-color: #8F7368;
+  position: absolute;
+  top: 0;
+  right: 99.8%;
+  transform: rotateY(-90deg);
+  transform-origin: top right;
+}
+.trophy .base-side.right{
+  left: 99.8%;
+  transform: rotateY(90deg);
+  transform-origin: top left;
+} 
+.trophy .plate {
+  background-color: #FFCB21;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
+  height: 40%;
+  width: 80%;
+  overflow: hidden;
+}
+.trophy .plate:after {
+  content: "";
+  background-color: #FFF0C9bb;
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  left: 20%;
+  top: 0;
+  transform: skew(50deg);
+ animation: 2s ease-in 1s infinite alternate both shine ;
+}
+
+@keyframes shine{
+  from{
+    transform: translateX(70px) skew(50deg) ;
+  }
+  to{
+    transform: translateX(0px) skew(50deg) ;
+  }
+}
+
+.crop-base{
+  position:absolute;
+  bottom: 100%;
+  width: 45%;
+  height: 25%;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #8F7368;
+  
+  bottom: 90%;
+  left: 50%;
+  transform: translate(-50%) rotateX(60deg) translateY(-39%);
+  transform-origin: bottom center;
+  border-radius: 50%;
+}
+
+
+
+/* Thank you page styling */
+
+        .congrats-box {
+            background-color: #ff0000;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+
+		
+        .back-link {
+            color: #ccc; /* Set the color to #333 */
+            text-decoration: none;
+			font-size:16px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-family: 'Oswald', sans-serif; /* Use Google's Oswald font */
+            font-weight: 100; /* Set the font weight to light */
+        }
+		
+		.back-link:visited {
+            color: #ccc; /* Set the visited link color to #333 */
+        }
+		
+		.footer-text {
+			color: #ccc;
+			font-size: 10px;
+			font-family: 'Oswald', sans-serif;
+			font-weight: 100;
+		}
+
