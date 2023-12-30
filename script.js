@@ -1,3 +1,27 @@
+// JavaScript function to update the countdown
+function updateCountdown() {
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2024 00:00:00").getTime();
+
+    // Get the current date and time
+    var now = new Date().getTime();
+
+    // Calculate the remaining time
+    var distance = countDownDate - now;
+
+    // Calculate days, hours, minutes, and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the countdown
+    document.getElementById("countdown").innerHTML = "Draw results in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    // Update every 1 second
+    setTimeout(updateCountdown, 1000);
+};
+
 window.addEventListener('load', function () {
     var countdownElement = document.getElementById('countdown');
     
@@ -19,20 +43,34 @@ window.addEventListener('load', function () {
             }
         };
 		
-        function submitForm(event) {
+function submitForm(event) {
+    // Perform form validation if needed
 
+    // Assuming you have a function updateCountdown() for countdown
 
-            // Perform form validation if needed
+    // Simulate a successful submission
+    showSuccessMessage();
 
-            // Assuming you have a function updateCountdown() for countdown
+    // Get the form data
+    var formData = new FormData(document.getElementById('myForm'));
 
-            // Simulate a successful submission
-            showSuccessMessage();
-			event.preventDefault();
+    // Use AJAX to submit the form data
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'your_php_script.php', true);
 
-            // Optionally, you can use AJAX to submit the form data to your PHP script
-            // and handle the response for more robust form handling
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Handle the response if needed
         }
+    };
+
+    xhr.send(formData);
+
+    event.preventDefault();
+}
+
+
+
         function showSuccessMessage() {
             document.getElementById('myForm').style.display = 'none';
 
