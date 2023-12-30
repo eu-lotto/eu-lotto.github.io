@@ -1,4 +1,6 @@
 // JavaScript function to update the countdown
+
+
 function updateCountdown() {
     // Set the date we're counting down to
     var countDownDate = new Date("Jan 5, 2024 00:00:00").getTime();
@@ -43,34 +45,21 @@ window.addEventListener('load', function () {
             }
         };
 		
-function submitForm(event) {
-    // Perform form validation if needed
+        function submitForm(event) {
+//event.preventDefault();
 
-    // Assuming you have a function updateCountdown() for countdown
+            // Perform form validation if needed
 
-    // Simulate a successful submission
-    showSuccessMessage();
+            // Assuming you have a function updateCountdown() for countdown
 
-    // Get the form data
-    var formData = new FormData(document.getElementById('myForm'));
+            // Simulate a successful submission
+            showSuccessMessage();
+			
 
-    // Use AJAX to submit the form data
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'your_php_script.php', true);
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            // Handle the response if needed
-        }
-    };
-
-    xhr.send(formData);
-
-    event.preventDefault();
-}
-
-
-
+            // Optionally, you can use AJAX to submit the form data to your PHP script
+            // and handle the response for more robust form handling
+        };
+		
         function showSuccessMessage() {
             document.getElementById('myForm').style.display = 'none';
 
@@ -85,7 +74,7 @@ function submitForm(event) {
 	successMessage.style.fontSize = '44px';
     successMessage.style.fontWeight = 'bold';
             document.body.appendChild(successMessage);
-        }
+        };
 
 //-----------Var Inits--------------
 canvas = document.getElementById("canvas");

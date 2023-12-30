@@ -84,7 +84,7 @@ img {
 	max-width: 600px;
 }
 
-input[type="submit"] {
+button[type="submit"] {
 
 	display: block;
 	margin: auto;
@@ -105,7 +105,7 @@ input[type="submit"] {
 }
 
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
 	background-color: #337ab7;
 	border-color: #2e6da4;
 }
@@ -113,7 +113,7 @@ input[type="submit"]:hover {
 
 
 
-input[type="Submit"]:disabled {
+button[type="Submit"]:disabled {
   opacity: 1;
     border: solid 2px #989898 !important;
     background-color: #989898 !important;
